@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantTitleCell" rowHeight="962" id="KGk-i7-Jjw" customClass="RestaurantTitleCell" customModule="Week2_LearnUITableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="962"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="962"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13a-5l-a4W">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="962"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-ef-C3Q">
+                                <rect key="frame" x="20" y="20" width="48.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.20784313730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mwU-L5-VnJ" customClass="MyOwnTableView" customModule="Week2_LearnUITableView" customModuleProvider="target">
+                                <rect key="frame" x="20" y="61" width="334" height="881"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BPn-ef-C3Q" firstAttribute="leading" secondItem="13a-5l-a4W" secondAttribute="leading" constant="20" id="4tw-2G-8rs"/>
+                            <constraint firstItem="mwU-L5-VnJ" firstAttribute="leading" secondItem="13a-5l-a4W" secondAttribute="leading" constant="20" id="ASa-AX-xWt"/>
+                            <constraint firstItem="BPn-ef-C3Q" firstAttribute="top" secondItem="13a-5l-a4W" secondAttribute="top" constant="20" id="GDe-rh-wy6"/>
+                            <constraint firstAttribute="bottom" secondItem="mwU-L5-VnJ" secondAttribute="bottom" constant="20" id="O6g-qa-fd3"/>
+                            <constraint firstAttribute="trailing" secondItem="mwU-L5-VnJ" secondAttribute="trailing" constant="20" id="dML-Gh-Qys"/>
+                            <constraint firstItem="mwU-L5-VnJ" firstAttribute="top" secondItem="BPn-ef-C3Q" secondAttribute="bottom" constant="18" id="l2l-Cp-NRS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="13a-5l-a4W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FRE-K6-sxm"/>
+                    <constraint firstItem="13a-5l-a4W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NyV-OQ-VET"/>
+                    <constraint firstAttribute="trailing" secondItem="13a-5l-a4W" secondAttribute="trailing" id="ev7-d8-zWf"/>
+                    <constraint firstAttribute="bottom" secondItem="13a-5l-a4W" secondAttribute="bottom" id="hoI-CP-NyF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="orderTableView" destination="mwU-L5-VnJ" id="SgY-2d-jAO"/>
+            </connections>
+            <point key="canvasLocation" x="151" y="393"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
