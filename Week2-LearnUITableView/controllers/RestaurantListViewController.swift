@@ -10,8 +10,10 @@ import UIKit
 class RestaurantListViewController: UIViewController {
     
     var restaurant: [RestaurantStruct] = []
+    var category : String = String()
     
     static let identifier = "pageListId"
+    @IBOutlet weak var categoryLabel: UILabel!
     
     // inisialisasi table view restaurant list di storyboard
     @IBOutlet weak var restaurantListView: UITableView?
@@ -19,6 +21,8 @@ class RestaurantListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        
+        categoryLabel.text = category
     }
     
     // regist tableview list restaurant, pakai nib karena dia bentuknya XIB

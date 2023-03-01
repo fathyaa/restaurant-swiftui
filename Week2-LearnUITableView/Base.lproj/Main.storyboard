@@ -78,6 +78,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryLabel" destination="3or-zJ-KUZ" id="eax-Yr-2mV"/>
                         <outlet property="restaurantListView" destination="Vtf-G8-tvt" id="bMy-eS-O8u"/>
                     </connections>
                 </viewController>

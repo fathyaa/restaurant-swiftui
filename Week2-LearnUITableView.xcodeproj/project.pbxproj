@@ -25,6 +25,10 @@
 		01627CDC29A5C38700BC69FF /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01627CDA29A5C38700BC69FF /* OrderCell.xib */; };
 		01627CDF29A5CA3000BC69FF /* MyOwnTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01627CDE29A5CA3000BC69FF /* MyOwnTable.swift */; };
 		01627CE629A5CDCF00BC69FF /* FoodCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01627CE529A5CDCF00BC69FF /* FoodCategories.swift */; };
+		365EAB8D29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EAB8B29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.swift */; };
+		365EAB8E29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365EAB8C29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.xib */; };
+		365EAB9329AF0570002FD8A3 /* FoodTypeColTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365EAB9129AF0570002FD8A3 /* FoodTypeColTableViewCell.swift */; };
+		365EAB9429AF0570002FD8A3 /* FoodTypeColTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365EAB9229AF0570002FD8A3 /* FoodTypeColTableViewCell.xib */; };
 		36F812CC29A7562800DC6BEB /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F812CA29A7562800DC6BEB /* AboutCell.swift */; };
 		36F812CD29A7562800DC6BEB /* AboutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F812CB29A7562800DC6BEB /* AboutCell.xib */; };
 		36F812D029A7622B00DC6BEB /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F812CE29A7622B00DC6BEB /* TitleCell.swift */; };
@@ -58,7 +62,11 @@
 		01627CDA29A5C38700BC69FF /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		01627CDE29A5CA3000BC69FF /* MyOwnTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOwnTable.swift; sourceTree = "<group>"; };
 		01627CE529A5CDCF00BC69FF /* FoodCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategories.swift; sourceTree = "<group>"; };
-		36F812CA29A7562800DC6BEB /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutCell.swift; path = ../../AboutCell.swift; sourceTree = "<group>"; };
+		365EAB8B29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		365EAB8C29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListFoodTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		365EAB9129AF0570002FD8A3 /* FoodTypeColTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypeColTableViewCell.swift; sourceTree = "<group>"; };
+		365EAB9229AF0570002FD8A3 /* FoodTypeColTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTypeColTableViewCell.xib; sourceTree = "<group>"; };
+		36F812CA29A7562800DC6BEB /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
 		36F812CB29A7562800DC6BEB /* AboutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutCell.xib; sourceTree = "<group>"; };
 		36F812CE29A7622B00DC6BEB /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		36F812CF29A7622B00DC6BEB /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
@@ -135,24 +143,9 @@
 		01627CE329A5CCEF00BC69FF /* views */ = {
 			isa = PBXGroup;
 			children = (
-				36F812D229A769B300DC6BEB /* AddressCell.swift */,
-				36F812D329A769B300DC6BEB /* AddressCell.xib */,
-				36F812CE29A7622B00DC6BEB /* TitleCell.swift */,
-				36F812CF29A7622B00DC6BEB /* TitleCell.xib */,
-				36F812CA29A7562800DC6BEB /* AboutCell.swift */,
-				36F812CB29A7562800DC6BEB /* AboutCell.xib */,
-				01627CD529A5B80100BC69FF /* RestaurantTitleCell.swift */,
-				01627CD629A5B80100BC69FF /* RestaurantTitleCell.xib */,
-				01627CD929A5C38700BC69FF /* OrderCell.swift */,
-				01627CDA29A5C38700BC69FF /* OrderCell.xib */,
-				01627CCD29A5AC2C00BC69FF /* ListRestaurantCell.swift */,
-				01627CCE29A5AC2C00BC69FF /* ListRestaurantCell.xib */,
-				01627CC929A5A32100BC69FF /* ListFoodTypeCell.swift */,
-				01627CCA29A5A32100BC69FF /* ListFoodTypeCell.xib */,
-				36F812D629A76BDF00DC6BEB /* OpenTimeCell.swift */,
-				36F812D729A76BDF00DC6BEB /* OpenTimeCell.xib */,
-				36F812DA29A76E5400DC6BEB /* DetailImageCell.swift */,
-				36F812DB29A76E5400DC6BEB /* DetailImageCell.xib */,
+				365EAB8A29AEF858002FD8A3 /* listFoodType */,
+				365EAB8829AEF809002FD8A3 /* listRestaurantPage */,
+				365EAB8729AEF7C2002FD8A3 /* detailPage */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -171,6 +164,57 @@
 				01627CE529A5CDCF00BC69FF /* FoodCategories.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		365EAB8729AEF7C2002FD8A3 /* detailPage */ = {
+			isa = PBXGroup;
+			children = (
+				365EAB8929AEF83D002FD8A3 /* menuOrder */,
+				36F812D629A76BDF00DC6BEB /* OpenTimeCell.swift */,
+				36F812D729A76BDF00DC6BEB /* OpenTimeCell.xib */,
+				36F812DA29A76E5400DC6BEB /* DetailImageCell.swift */,
+				36F812DB29A76E5400DC6BEB /* DetailImageCell.xib */,
+				36F812CE29A7622B00DC6BEB /* TitleCell.swift */,
+				36F812CF29A7622B00DC6BEB /* TitleCell.xib */,
+				36F812CA29A7562800DC6BEB /* AboutCell.swift */,
+				36F812CB29A7562800DC6BEB /* AboutCell.xib */,
+				01627CD529A5B80100BC69FF /* RestaurantTitleCell.swift */,
+				01627CD629A5B80100BC69FF /* RestaurantTitleCell.xib */,
+				36F812D329A769B300DC6BEB /* AddressCell.xib */,
+				36F812D229A769B300DC6BEB /* AddressCell.swift */,
+			);
+			path = detailPage;
+			sourceTree = "<group>";
+		};
+		365EAB8829AEF809002FD8A3 /* listRestaurantPage */ = {
+			isa = PBXGroup;
+			children = (
+				01627CCD29A5AC2C00BC69FF /* ListRestaurantCell.swift */,
+				01627CCE29A5AC2C00BC69FF /* ListRestaurantCell.xib */,
+			);
+			path = listRestaurantPage;
+			sourceTree = "<group>";
+		};
+		365EAB8929AEF83D002FD8A3 /* menuOrder */ = {
+			isa = PBXGroup;
+			children = (
+				01627CD929A5C38700BC69FF /* OrderCell.swift */,
+				01627CDA29A5C38700BC69FF /* OrderCell.xib */,
+			);
+			path = menuOrder;
+			sourceTree = "<group>";
+		};
+		365EAB8A29AEF858002FD8A3 /* listFoodType */ = {
+			isa = PBXGroup;
+			children = (
+				01627CC929A5A32100BC69FF /* ListFoodTypeCell.swift */,
+				01627CCA29A5A32100BC69FF /* ListFoodTypeCell.xib */,
+				365EAB8B29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.swift */,
+				365EAB8C29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.xib */,
+				365EAB9129AF0570002FD8A3 /* FoodTypeColTableViewCell.swift */,
+				365EAB9229AF0570002FD8A3 /* FoodTypeColTableViewCell.xib */,
+			);
+			path = listFoodType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +277,7 @@
 			files = (
 				01627CDC29A5C38700BC69FF /* OrderCell.xib in Resources */,
 				36F812CD29A7562800DC6BEB /* AboutCell.xib in Resources */,
+				365EAB8E29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.xib in Resources */,
 				36F812D129A7622B00DC6BEB /* TitleCell.xib in Resources */,
 				01627CD029A5AC2C00BC69FF /* ListRestaurantCell.xib in Resources */,
 				36F812D929A76BDF00DC6BEB /* OpenTimeCell.xib in Resources */,
@@ -240,6 +285,7 @@
 				01627CBF29A5A20300BC69FF /* Assets.xcassets in Resources */,
 				36F812D529A769B300DC6BEB /* AddressCell.xib in Resources */,
 				01627CBD29A5A1FF00BC69FF /* Main.storyboard in Resources */,
+				365EAB9429AF0570002FD8A3 /* FoodTypeColTableViewCell.xib in Resources */,
 				01627CCC29A5A32100BC69FF /* ListFoodTypeCell.xib in Resources */,
 				36F812DD29A76E5400DC6BEB /* DetailImageCell.xib in Resources */,
 				01627CD829A5B80100BC69FF /* RestaurantTitleCell.xib in Resources */,
@@ -265,9 +311,11 @@
 				36F812D429A769B300DC6BEB /* AddressCell.swift in Sources */,
 				01627CB629A5A1FF00BC69FF /* AppDelegate.swift in Sources */,
 				01627CB829A5A1FF00BC69FF /* SceneDelegate.swift in Sources */,
+				365EAB9329AF0570002FD8A3 /* FoodTypeColTableViewCell.swift in Sources */,
 				01627CDF29A5CA3000BC69FF /* MyOwnTable.swift in Sources */,
 				36F812D829A76BDF00DC6BEB /* OpenTimeCell.swift in Sources */,
 				01627CCB29A5A32100BC69FF /* ListFoodTypeCell.swift in Sources */,
+				365EAB8D29AEFA05002FD8A3 /* ListFoodTypeCollectionViewCell.swift in Sources */,
 				01627CD729A5B80100BC69FF /* RestaurantTitleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

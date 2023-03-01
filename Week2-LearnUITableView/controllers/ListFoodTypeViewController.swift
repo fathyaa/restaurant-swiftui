@@ -7,6 +7,22 @@
 
 import UIKit
 
+enum ListFoodTypeSection : Int{
+    case foodType
+    case youMightLike
+    
+    init(_ section: Int){
+        switch section {
+        case 0 :
+            self = .foodType
+        case 1 :
+            self = .youMightLike
+        default :
+            self = .foodType
+        }
+    }
+}
+
 class ListFoodTypeViewController: UIViewController {
     
     // array untuk list food type
@@ -55,6 +71,7 @@ class ListFoodTypeViewController: UIViewController {
         listFoodTypeTableView.register(listFoodTypeNib, forCellReuseIdentifier: "foodTypeCell")
         listFoodTypeTableView.delegate = self
         listFoodTypeTableView.dataSource = self
+        listFoodTypeTableView.register(UINib(nibName: "FoodTypeColTableViewCell", bundle: nil), forCellReuseIdentifier: FoodTypeColTableViewCell.identifier)
        
     }
     
@@ -62,33 +79,61 @@ class ListFoodTypeViewController: UIViewController {
         print("yh")
     }
     
-    func navigateToDetail(_ restaurant: [RestaurantStruct]) {
+    func navigateToDetail(_ restaurant: [RestaurantStruct], category: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detail = storyboard.instantiateViewController(withIdentifier: "restaurantListIdentifier") as! RestaurantListViewController
         detail.restaurant = restaurant
+        detail.category = category
         navigationController?.pushViewController(detail, animated: true)
     }
-
 }
 
 extension ListFoodTypeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // munculin cell list food type
-        guard let cell = listFoodTypeTableView.dequeueReusableCell(withIdentifier: "foodTypeCell", for: indexPath) as? ListFoodTypeCell else {return UITableViewCell()}
-        cell.foodTypeLabel.text = restaurantCategories[indexPath.row].category
-        cell.placeCountButton.setTitle("\(restaurantCategories[indexPath.row].resto.count) places", for: .normal)
-        return cell
+        switch ListFoodTypeSection(indexPath.section) {
+        case .foodType :
+            guard let cell = listFoodTypeTableView.dequeueReusableCell(withIdentifier: "foodTypeCell", for: indexPath) as? ListFoodTypeCell else {return UITableViewCell()}
+                   cell.foodTypeLabel.text = restaurantCategories[indexPath.row].category
+                   cell.placeCountButton.setTitle("\(restaurantCategories[indexPath.row].resto.count) places", for: .normal)
+                   return cell
+        case .youMightLike :
+            guard let cell = listFoodTypeTableView.dequeueReusableCell(withIdentifier: FoodTypeColTableViewCell.identifier, for: indexPath) as? FoodTypeColTableViewCell else {return UITableViewCell()}
+            cell.restaurant = restaurantCategories[indexPath.row].resto
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // munculin 5 baris
-        return restaurantCategories.count
+        // banyak barisnya sesuai data yg ada
+        switch ListFoodTypeSection(section) {
+        case .foodType :
+            return restaurantCategories.count
+        case .youMightLike :
+            return 1
+        }
     }
-    
     
     // buat arahin cell list food type ke halaman list restaurant
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigateToDetail(restaurantCategories[indexPath.row].resto)
+        
+        if indexPath.section == 0 {
+            navigateToDetail(restaurantCategories[indexPath.row].resto, category: restaurantCategories[indexPath.row].category)
+        }
+       
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch ListFoodTypeSection(section){
+        case .foodType :
+            return "Food Types"
+        case .youMightLike :
+            return "You might like"
+        }
     }
 }
